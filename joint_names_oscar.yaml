@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'middle_triangle_link_joint', 'middle_left_triangle_joint', 'middle_right_triangle_joint', 'left_wheel_link_joint', 'right_wheel_link_joint', 'mirror_rectangle_link_joint', ]

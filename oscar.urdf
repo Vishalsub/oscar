@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="oscar">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00196170680937007 -0.0309340370914814 0.0868228015469567"
+        rpy="0 0 0" />
+      <mass
+        value="0.458411450979246" />
+      <inertia
+        ixx="0.000542871589384657"
+        ixy="9.16830524623752E-08"
+        ixz="-1.69749191833194E-07"
+        iyy="0.0010867166848476"
+        iyz="3.00802775983817E-06"
+        izz="0.000657663684621468" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="triangle_link">
+    <inertial>
+      <origin
+        xyz="-0.0147994463666398 0.00958206252244163 0.161163107603643"
+        rpy="0 0 0" />
+      <mass
+        value="0.074547880950281" />
+      <inertia
+        ixx="5.43833714550981E-05"
+        ixy="-1.64485303519001E-06"
+        ixz="1.46443358252426E-06"
+        iyy="6.94150724784236E-05"
+        iyz="-7.5546027497944E-07"
+        izz="2.41737178555845E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/triangle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/triangle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="triangle_link_joint"
+    type="fixed">
+    <origin
+      xyz="0.15787 0.073755 -0.029117"
+      rpy="1.5795 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="triangle_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="another_triangle_link">
+    <inertial>
+      <origin
+        xyz="0.00503934592451483 0.00923791259517172 0.161701894420996"
+        rpy="0 0 0" />
+      <mass
+        value="0.0721297540054504" />
+      <inertia
+        ixx="5.39632726368139E-05"
+        ixy="1.56283388931883E-06"
+        ixz="-1.44322942163294E-06"
+        iyy="6.91067908994078E-05"
+        iyz="5.0215436817381E-08"
+        izz="2.3503289928344E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/another_triangle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/another_triangle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="another_triangle_link_joint"
+    type="fixed">
+    <origin
+      xyz="0.2065 -0.000769 0.2154"
+      rpy="-1.5752 -1.5533 1.5664" />
+    <parent
+      link="triangle_link" />
+    <child
+      link="another_triangle_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rectangle_link">
+    <inertial>
+      <origin
+        xyz="-0.0316832442893363 -0.0186100171375605 0.155763644853517"
+        rpy="0 0 0" />
+      <mass
+        value="0.164023892383727" />
+      <inertia
+        ixx="0.000289386199645965"
+        ixy="-3.43537232454041E-06"
+        ixz="-1.71295548901096E-06"
+        iyy="9.4604969825702E-05"
+        iyz="1.74658343347157E-06"
+        izz="0.000341456068141042" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/rectangle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/rectangle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rectangle_link_joint"
+    type="fixed">
+    <origin
+      xyz="0.076757 0.15632 0.14805"
+      rpy="-1.5795 0 3.1329" />
+    <parent
+      link="another_triangle_link" />
+    <child
+      link="rectangle_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="middle_triangle_link">
+    <inertial>
+      <origin
+        xyz="0.0588421497135379 -0.0767583372391954 0.00268541721004559"
+        rpy="0 0 0" />
+      <mass
+        value="0.0834635434624063" />
+      <inertia
+        ixx="4.56673953012276E-05"
+        ixy="-6.35604825028308E-08"
+        ixz="2.01812979626431E-06"
+        iyy="2.18500355396937E-05"
+        iyz="2.35878887686961E-21"
+        izz="5.43856488817236E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/middle_triangle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/middle_triangle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_triangle_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.080019 -0.167 -0.018"
+      rpy="3.1416 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="middle_triangle_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="middle_left_triangle">
+    <inertial>
+      <origin
+        xyz="-0.0402829481843221 -0.01584473946284 0.0100577286903399"
+        rpy="0 0 0" />
+      <mass
+        value="0.0478134415054504" />
+      <inertia
+        ixx="1.16931866407475E-05"
+        ixy="-3.1676773406174E-06"
+        ixz="-1.41779823992197E-06"
+        iyy="1.22757737145985E-05"
+        iyz="3.6055996039486E-07"
+        izz="1.56922706277985E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/middle_left_triangle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/middle_left_triangle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_left_triangle_joint"
+    type="continuous">
+    <origin
+      xyz="0.1083 -0.1083 0.012"
+      rpy="-3.1416 0 1.5708" />
+    <parent
+      link="middle_triangle_link" />
+    <child
+      link="middle_left_triangle" />
+    <axis
+      xyz="0.70711 0.70711 0" />
+  </joint>
+  <link
+    name="middle_right_triangle">
+    <inertial>
+      <origin
+        xyz="0.0174046059751574 0.0680057656005417 -0.0100577286903403"
+        rpy="0 0 0" />
+      <mass
+        value="0.0478134415054504" />
+      <inertia
+        ixx="1.16931866407475E-05"
+        ixy="-3.1676773406174E-06"
+        ixz="1.41779823992197E-06"
+        iyy="1.22757737145985E-05"
+        iyz="-3.60559960394858E-07"
+        izz="1.56922706277985E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/middle_right_triangle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/middle_right_triangle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_right_triangle_joint"
+    type="continuous">
+    <origin
+      xyz="0.02445 0.0059497 0.012"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="middle_triangle_link" />
+    <child
+      link="middle_right_triangle" />
+    <axis
+      xyz="0.70711 0.70711 0" />
+  </joint>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.00784940612576867 4.28642898509662E-05 -9.31058257116688E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0274335863022573" />
+      <inertia
+        ixx="1.13862377406955E-05"
+        ixy="-4.63211245308703E-15"
+        ixz="9.35749929815327E-15"
+        iyy="6.00789413976309E-06"
+        iyz="-1.82633067451501E-08"
+        izz="6.02049780409005E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.0586 -0.08 -0.035"
+      rpy="2.7498 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.00784940612576873 4.28642898509454E-05 -9.31058257166995E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0274335863022572" />
+      <inertia
+        ixx="1.13862377406954E-05"
+        ixy="-4.63212897846196E-15"
+        ixz="9.35757345633532E-15"
+        iyy="6.00789413976302E-06"
+        iyz="-1.82633067450596E-08"
+        izz="6.02049780409007E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0586 -0.08 -0.035"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="mirror_trianglr_link">
+    <inertial>
+      <origin
+        xyz="0.00587930458158875 0.00936443519989369 0.161452094196288"
+        rpy="0 0 0" />
+      <mass
+        value="0.074547880950281" />
+      <inertia
+        ixx="5.44136654321586E-05"
+        ixy="1.8011855322131E-06"
+        ixz="-1.43514860815113E-06"
+        iyy="6.9397363779311E-05"
+        iyz="4.69758482172569E-08"
+        izz="2.41611325776369E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/mirror_trianglr_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/mirror_trianglr_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mirror_trianglr_link_joint"
+    type="fixed">
+    <origin
+      xyz="-0.14887 0.073878 -0.031766"
+      rpy="1.5621 -0.0087263 7.6155E-05" />
+    <parent
+      link="base_link" />
+    <child
+      link="mirror_trianglr_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="mirror_ano_triangle_link">
+    <inertial>
+      <origin
+        xyz="-0.0139606237966191 0.00945259480697905 0.161415205747311"
+        rpy="0 0 0" />
+      <mass
+        value="0.0721297540054504" />
+      <inertia
+        ixx="5.39371506401738E-05"
+        ixy="-1.4050380646756E-06"
+        ixz="1.46835760801126E-06"
+        iyy="6.91203276181002E-05"
+        iyz="-7.58629222720149E-07"
+        izz="2.35158752062916E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/mirror_ano_triangle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/mirror_ano_triangle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mirror_ano_triangle_link_joint"
+    type="fixed">
+    <origin
+      xyz="-0.21537 0.002726 0.20652"
+      rpy="1.5795 1.5621 1.5621" />
+    <parent
+      link="mirror_trianglr_link" />
+    <child
+      link="mirror_ano_triangle_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="mirror_rectangle_link">
+    <inertial>
+      <origin
+        xyz="-0.0316832542775965 0.0186100121434307 0.000146265019429773"
+        rpy="0 0 0" />
+      <mass
+        value="0.164023892383727" />
+      <inertia
+        ixx="0.000289386199645965"
+        ixy="3.4353723244694E-06"
+        ixz="-1.71294995482485E-06"
+        iyy="9.46049698257021E-05"
+        iyz="-1.74658343347196E-06"
+        izz="0.000341456068141042" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/mirror_rectangle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://oscar/meshes/mirror_rectangle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mirror_rectangle_link_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.084392 0.0012789 0.14655"
+      rpy="1.5621 0 0" />
+    <parent
+      link="mirror_ano_triangle_link" />
+    <child
+      link="mirror_rectangle_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
